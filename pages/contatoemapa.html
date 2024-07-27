@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <title>Contato</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/cssjava.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    
+<style>
+
+    body {
+        background-image: -webkit-radial-gradient(rgb(114, 49, 105), rgb(89, 87, 212));
+        color: white;
+    }
+
+    #address {
+        width:450px;
+        padding:10px;
+        border:3px solid rgb(56, 56, 56);
+        margin:2px;
+        font-size: 20px;
+        text-align: left;
+      
+    }
+
+    .localização {
+        text-align: center;
+    }
+
+   
+</style>
+    
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div id="trapezoid">
+          <a class="sub-home" href="paginainicial.html">Página inicial</a>
+          <a href="paginainicial.html" class="expandHome">Sobre</a>
+           <div class="subnav">
+           <a href="contatoemapa.html" class="expandHome">Contacto</a>
+           </div>
+            <div class="subnav">
+           <a href="orçamento.html" class="expandHome">Orçamento</a>
+           </div></div>
+            </nav>
+
+    <div class="localização">
+        <h1> MasterCode : </h1>
+        <div id="address"> <u>Endereço:</u> Rua da Constituição 6-102, 4200-300 Porto<br>
+        <u>Horário de funcionamento:</u> segunda - sexta (8h às 18h)<br>
+        <u>Telefone:</u> +351 987 654 321
+        </div>
+        <br>
+        <div>
+            <label for="destination">Qual a sua localização?</label>
+            <input type="text" id="destination">
+            <button onclick="calculateRoute()">Calcular rota</button>
+        </div><br>
+        <div id="map"></div>
+    
+
+    </div>
+                
+
+    <div class="caixa0">
+        <h1 style="text-align: center; font-style: italic;"> CONTACTE-NOS</h1>
+    </div>
+    <div class="caixa1">
+        <form action="post" method="post" id="formulario" name="formulario" onsubmit="return validar(this)">
+            <h3>Preencha os seguintes campos:</h3>
+            <table>
+                <tr>
+                    <td>
+                        <h5>NOME COMPLETO:</h5>
+                    </td>
+                    <td style="font-size:20px;"><input class="textbox" type="text" name="nome" maxlength="50" size="40"
+                            id="nome" value="" placeholder="O seu nome" required>*</td>
+                </tr>
+                <tr>
+                    <td>
+                        <h5>NOME DA EMPRESA:</h5>
+                    </td>
+                    <td style="font-size:20px;"><input class="textbox" type="text" name="nome da empresa" maxlength="50" size="40"
+                            id="nomeempresa" value="" placeholder="Nome da empresa solicitante" required>*</td>
+                </tr>
+                <tr>
+                    <td>
+                        <h5>MORADA:</h5>
+                    </td>
+                    <td style="font-size:20px;"><input class="textbox" type="text" name="morada" maxlength="80"
+                            size="40" id="morada" value="" placeholder="A sua morada" required>*</td>
+                </tr>
+                <tr>
+                    <td>
+                        <h5>TELEMÓVEL:</h5>
+                    </td>
+                    <td style="font-size:20px;"><input class="textbox" type="text" name="telemovel" maxlength="9"
+                            size="10" id="telemovel" value="" placeholder="O seu número" required>*
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h5>DATA SUGERIDA PARA REUNIÃO:</h5>
+                    </td>
+                    <td style="font-size:20px;"><input type="date" name="date" id="data" value=""
+                         required>*</td>
+                </tr>
+                <tr>
+                    <td>
+                        <h5>E-MAIL:</h5>
+                    </td>
+                    <td style="font-size:20px;"><input class="textbox" name="email" maxlength="40" size="40" id="email" value="" placeholder="O seu e-mail" required>*</td>
+                </tr>
+                <tr>
+                    <td>
+                        <h5>MOTIVO DE CONTATO DA REUNIÃO:</h5>
+                    </td>
+                    <td style="font-size: 20px;"><textarea class="textbox" name="reunião" style="font-size: 15px;" rows="10"
+                        cols="36" required></textarea>*</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p>(*) Os campos marcados com um asterisco são obrigatórios.</p>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <div class="botoes">
+                <input type="submit" name="Botao enviar" class="botao cinza" onclick="Enviar();" value="ENVIAR">
+                <input type="reset" name="Botao apagar" class="botao cinza" value="APAGAR">
+            </div>
+        </form>
+    </div>
+<script src="javascript/contatoemapa.js"></script>
+    </body>
+</html>

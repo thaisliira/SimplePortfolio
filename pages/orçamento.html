@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <title>Orçamento</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/cssjava.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/d132031da6.js" crossorigin="anonymous"></script> 
+
+
+</head>
+  <body>
+
+    <nav class="navbar">
+        <div id="trapezoid">
+          <a class="sub-home" href="paginainicial.html">Página inicial</a>
+          <a href="paginainicial.html" class="expandHome">Sobre</a>
+           <div class="subnav">
+           <a href="contatoemapa.html" class="expandHome">Contacto</a>
+           </div>
+            <div class="subnav">
+           <a href="orçamento.html" class="expandHome">Orçamento</a>
+           </div></div>
+            </nav>
+
+    <div class="caixaorcamento">
+
+        <h3 style="text-align: center;">Faça o seu orçamento:</h3>
+        
+        <form action="post" method="POST" onchange="calcularorcamento()" name="formulario">
+        
+                        
+        Tipo de página web:
+            <select name="tipopagina"  id="tipopagina" required>
+                <option value="">Escolha uma opção</option>
+                <option value="500" id="tipo1">BLOG</option>
+                <option value="1000" id="tipo2">E-COMMERCE</option>
+                <option value="1500" id="tipo3">PORTFOLIO</option>
+                <option value="2000" id="tipo4">SITES</option>
+        </select>
+            
+        Preço <input type="text" id="valor-tipopagina" name="valor-tipopagina" value="" >
+
+    </form>
+
+
+    <h3 style="text-align: center;">Marque os itens que deseja adicionar ao seu website:</h3>
+    <form id="checkboxGroup">
+      <input type="checkbox" name="checkbox1" value="400"  onclick="calcularorcamento()"> Quem Somos <br>
+      <input type="checkbox" name="checkbox2" value="400"  onclick="calcularorcamento()"> Galeria<br>
+      <input type="checkbox" name="checkbox3" value="400"  onclick="calcularorcamento()"> Localização<br>
+      <input type="checkbox" name="checkbox4" value="400"  onclick="calcularorcamento()"> Redes Sociais<br>
+      <input type="checkbox" name="checkbox5" value="400"  onclick="calcularorcamento()"> Formulário para Contacto<br>
+    </form>
+    
+    <h3 style="text-align: center;">Escolha o prazo em meses:</h3>
+    
+		Prazo em meses:
+		
+			<input type="number" id="prazo" onclick="calcularorcamento()">
+		
+	
+
+    <p style="text-align: center;"> Orçamento estimado: 
+        (pode sofrer alterações)</p>
+    <p id="resultado"></p>
+    </div>
+    <script src="javascript/javapratico.js"></script>
+  </body>
+</html>

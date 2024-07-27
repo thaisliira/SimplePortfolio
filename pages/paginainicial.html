@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<title> Caso Pratico JavaScript</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="css/cssjava.css">
+<link rel="stylesheet" type="text/css" href="css/lightbox.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<script src="https://kit.fontawesome.com/d132031da6.js" crossorigin="anonymous"></script>
+
+
+
+</head>
+
+<body onload="setTimeout(() => {alert('Olá, seja bem-vindo!')}, 5000)">
+    <div id="overlay"></div>
+
+<div class="header">
+<img id="image-header" src="imagens/code-header.jpg" alt="programacao" title="programacao" height="300" width="1000">
+
+</div>
+<nav class="navbar">
+    <div id="trapezoid">
+      <a class="sub-home" href="paginainicial.html">Página inicial</a>
+      <a href="paginainicial.html" class="expandHome">Sobre</a>
+       <div class="subnav">
+       <a href="contatoemapa.html" class="expandHome">Contacto</a>
+       </div>
+        <div class="subnav">
+       <a href="orçamento.html" class="expandHome">Orçamento</a>
+       </div> </div>
+        </nav>
+
+
+<section class="about">
+    <h1> Sobre a empresa <u>MasterCode</u></h1>
+<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+</section>
+
+<section class="gallery">
+
+    <h2 style="text-align: center;">Galeria</h2>
+
+<div class="row">
+  <div class="column" >
+    <img src="imagens/blog.jpeg" alt="blog" style="width:100%;" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="imagens/ecommerce.jpg" alt="ecommerce" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="imagens/portfolio.jpg" alt="portfolio" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="imagens/site.png" alt="site" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal"  class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="imagens/blog.jpeg" alt="blog" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="imagens/ecommerce.jpg" alt="ecommerce" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="imagens/portfolio.jpg" alt="portfolio" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="imagens/site.png" alt="site" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="imagens/blog.jpeg" style="width:100%" onclick="currentSlide(1)" alt="BLOG">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="imagens/ecommerce.jpg" style="width:100%" onclick="currentSlide(2)" alt="E-COMMERCE">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="imagens/portfolio.jpg" style="width:100%" onclick="currentSlide(3)" alt="PORTFOLIO">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="imagens/site.png" style="width:100%" onclick="currentSlide(4)" alt="SITES">
+    </div>
+  </div>
+</div>
+
+
+</section>
+
+<section class="news">
+<h3> Notícias </h3>
+    <div class="noticias">O que está acontecendo no mundo hoje?</div> <button id="exibir" onclick="carregar()">Exibir</button>
+    <div id="box">
+        
+    </div></section>
+<br>
+    
+<div class="redessociais"> 
+<div class="icones">
+        <a href="https://www.facebook.com/" target="_blank" style="color: grey;"> <i class="fab fa-facebook"> </i></a>
+        <a href="https://www.instagram.com/" target="_blank" style="color: grey;"> <i class="fab fa-instagram-square"></i></a>
+        <a href="https://www.youtube.com/" target="_blank" style="color: grey"> <i class="fab fa-youtube"></i></a>
+        <a href="https://twitter.com/" target="_blank" style="color: grey"> <i class="fa fa-twitter"></i></a>
+             
+            <p id="desenvolvido"> Powered by <u>Thaís Rios</u></p>
+            </div> </div>
+
+<script src="javascript/javapratico.js"></script>
+
+    </body>
+
+</html>
